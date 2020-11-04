@@ -1,0 +1,8 @@
+---
+- name: Configure Web Servers
+  hosts: tag_Group_qs_web
+  gather_facts: true
+  
+  roles:
+    - webservers-configure
+...
