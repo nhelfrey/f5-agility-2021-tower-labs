@@ -20,7 +20,8 @@
       delete_on_termination: true
       volume_size: 8
       volume_type: standard
-  loop: "{{ webserver_names }}"
+  loop: 
+    - "{{ webserver_names }}"
   loop_control:
     loop_var: name
   register: result
