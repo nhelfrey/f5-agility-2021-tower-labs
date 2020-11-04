@@ -21,7 +21,7 @@
       volume_size: 8
       volume_type: standard
   loop: 
-    - "{{ webserver_names }}"
+    - "{{ webserver_names.split(',') }}"
   loop_control:
     loop_var: name
   register: result
