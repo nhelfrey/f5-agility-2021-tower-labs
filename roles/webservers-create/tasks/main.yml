@@ -6,7 +6,7 @@
         group: "{{ security_group }}"
         image: "ami-01e36b7901e884a10"
         instance_tags:
-          Name: "{{ names }}"
+          Name: "F5-QS-Demo-{{ names }}"
           Description: "{{ description }}"
           mysidlabs-cost: "{{ cost }}"
           Group: "{{ group }}"
