@@ -15,3 +15,8 @@ instance_type: "t3a.small"
 region: "us-east-2"
 security_group: "ssh-http-https"
 vpc_subnet: "subnet-3964a275"
+
+# Tags
+description: "F5 Quick Start Demo"
+cost: "aap"
+group: "qs-web"

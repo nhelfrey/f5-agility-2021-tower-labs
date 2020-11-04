@@ -1,0 +1,27 @@
+---
+# tasks file for webservers-create
+- name: "Provision and launch instances"
+      ec2:
+        assign_public_ip: true
+        group: "{{ security_group }}"
+        image: "ami-01e36b7901e884a10"
+        instance_tags:
+          Name: "{{ names }}"
+          Description: "{{ description }}"
+          mysidlabs-cost: "{{ cost }}"
+          Group: "{{ group }}"
+        instance_type: "{{ instance_type }}"
+        key_name: "{{ aws_ssh_key_pair }}"
+        region: "{{ region }}"
+        vpc_subnet_id: "{{ vpc_subnet }}"
+        wait: true
+        volumes:
+        - device_name: /dev/sda1
+          delete_on_termination: true
+          volume_size: 8
+          volume_type: standard
+      loop: "{{ names }}"" 
+      loop_control:
+        index_var: names
+      register: result
+...
