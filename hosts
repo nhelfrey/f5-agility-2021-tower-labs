@@ -1,0 +1,9 @@
+[lb:children]
+f5
+
+[f5]
+siduser155.f5.mysidlabs.com private_ip=172.31.3.60
+
+[webservers]
+Web1 private_ip=172.31.19.21
+Web2 private_ip=172.31.20.204

@@ -1,0 +1,4 @@
+f5_username: admin
+f5_password: Mys1dlabspw!
+web_username: centos
+web_key: ~/.ssh/network-key.pem
