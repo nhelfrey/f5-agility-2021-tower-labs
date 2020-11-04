@@ -6,7 +6,7 @@
     group: "{{ security_group }}"
     image: "ami-01e36b7901e884a10"
     instance_tags:
-      Name: "F5-QS-Demo-{{ names }}"
+      Name: "F5-QS-Demo-{{ name }}"
       Description: "{{ description }}"
       mysidlabs-cost: "{{ cost }}"
       Group: "{{ group }}"
@@ -22,6 +22,6 @@
       volume_type: standard
   loop: "{{ webserver_names }}"
   loop_control:
-    loop_var: names
+    loop_var: name
   register: result
 ...
