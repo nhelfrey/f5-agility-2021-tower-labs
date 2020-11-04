@@ -1,0 +1,8 @@
+---
+- name: "Create host instances."
+  hosts: localhost
+  gather_facts: false
+
+  roles:
+    - webservers-create
+...
