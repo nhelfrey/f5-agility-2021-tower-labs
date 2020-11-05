@@ -2,10 +2,11 @@
 # tasks file for f5-add-pool-members
 - name: ADD POOL MEMBERS
   bigip_pool_member:
-    state: "present"
-    name: "{{ hostvars[item].ec2_tag_Name }}"
+    provider: "{{ provider }}"
     host: "{{ hostvars[item].ec2_private_ip_address }}"
-    port: "{{ port_num }}"
+    name: "{{ hostvars[item].ec2_tag_Name }}"
     pool: "{{ pool_name }}"
+    port: "{{ port_num }}"
+    state: "present"
   loop: "{{ groupName }}"
 ...
