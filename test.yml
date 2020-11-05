@@ -6,4 +6,6 @@
 
   tasks:
     - debug:
-        var: machine
+        var: machine.username
+    - debug:
+        var: machine.password
