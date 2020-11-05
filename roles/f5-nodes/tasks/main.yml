@@ -4,8 +4,8 @@
   bigip_node:
     provider:
       server: "{{ ansible_host }}"
-      user: "{{ f5_username }}"
-      password: "{{ f5_password }}"
+      user: "{{ username }}"
+      password: "{{ password }}"
       server_port: 8443
       validate_certs: false
     host: "{{ ec2_private_ip_address }}"
