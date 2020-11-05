@@ -7,7 +7,19 @@
     machine:
       username: '{{ ansible_user }}'
       password: '{{ ansible_password }}'
+    groupName: tag_Group_qs_web
 
-  roles:
-    - f5-nodes
+  tasks:
+  - name: Setup provider
+      set_fact:
+        provider:
+          server: "{{ ansible_host }}"
+          user: "{{ machine.username }}"
+          password: "{{ machine.password }}"
+          server_port: "8443"
+          validate_certs: "no"
+
+  - name: Call Node Role
+    include_role:
+      name: f5-nodes
 ...

@@ -2,13 +2,8 @@
 # tasks file for f5-nodes
 - name: CREATE NODES
   bigip_node:
-    provider:
-      server: "{{ ansible_host }}"
-      user: "{{ machine.username }}"
-      password: "{{ machine.password }}"
-      server_port: 8443
-      validate_certs: false
+    provider: "{{ provider }}"
     host: "{{ hostvars[item].ec2_private_ip_address }}"
     name: "{{ hostvars[item].ec2_tag_Name }}"
-  loop: "{{ groups['tag_Group_qs_web'] }}"
+  loop: "{{ groups['{{ groupName }}'] }}"
 ...
