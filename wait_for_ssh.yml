@@ -1,6 +1,6 @@
 ---
 - name: Wait for SSH
-  hosts: "tag_mysidlabs_owner_{{ siduser }}"
+  hosts: tag_Group_qs_web
   gather_facts: false
   tasks:
     - name: Wait for SSH
