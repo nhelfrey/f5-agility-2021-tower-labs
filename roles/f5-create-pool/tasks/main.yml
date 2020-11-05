@@ -1,0 +1,10 @@
+---
+# tasks file for f5-create-pool
+- name: CREATE POOL
+  bigip_pool:
+    provider: "{{ provider }}"
+    name: "{{ pool_name }}"
+    lb_method: "{{ lbmethod }}"
+    monitors: "{{ monitor }}"
+    monitor_type: "{{ monitortype }}"
+...
