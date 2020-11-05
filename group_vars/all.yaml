@@ -7,6 +7,7 @@ pool_name: 'http_pool'
 lbmethod: 'round-robin'
 monitor: '/Common/http'
 monitortype: 'and_list'
+port_num: '80'
 
 # Web Variables
 # ansible_user: "ec2-user"

@@ -13,7 +13,7 @@
         server_port: "8443"
         validate_certs: "no"
 
-  - name: Call Create Pool Role
+  - name: Call Add Pool Members
     include_role:
-      name: f5-create-pool
+      name: f5-add-pool-members
 ...
