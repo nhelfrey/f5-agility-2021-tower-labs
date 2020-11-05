@@ -5,7 +5,7 @@
 
   vars:
     machine:
-      username: '{{ ansible_user }}'
+      username: 'admin'
       password: '{{ ansible_password }}'
     groupName: "{{ groups['tag_Group_qs_web'] }}"
 
@@ -14,8 +14,8 @@
     set_fact:
       provider:
         server: "{{ ansible_host }}"
-        user: "{{ f5_username }}"
-        password: "{{ f5_password }}"
+        user: "{{ machine.username }}"
+        password: "{{ machine.password }}"
         server_port: "8443"
         validate_certs: "no"
 
