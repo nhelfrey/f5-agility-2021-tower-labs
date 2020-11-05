@@ -3,6 +3,10 @@
   hosts: tag_Group_qs_lb
   connection: local
   gather_facts: false
+  vars:
+    machine:
+      username: '{{ ansible_user }}'
+      password: '{{ ansible_password }}'
 
   roles:
     - f5-nodes
