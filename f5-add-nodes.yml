@@ -14,12 +14,17 @@
     set_fact:
       provider:
         server: "{{ ansible_host }}"
-        user: "{{ machine.username }}"
-        password: "{{ machine.password }}"
+        user: "{{ f5_username }}"
+        password: "{{ f5_password }}"
         server_port: "8443"
         validate_certs: "no"
 
   - name: Call Node Role
     include_role:
       name: f5-nodes
+
+  - debug:
+      var: machine.username
+  - debug:
+      var: machine.password
 ...
