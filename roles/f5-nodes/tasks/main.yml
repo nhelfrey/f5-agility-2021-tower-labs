@@ -11,9 +11,4 @@
     host: "{{ hostvars[item].ec2_private_ip_address }}"
     name: "{{ hostvars[item].ec2_tag_Name }}"
   loop: "{{ groups['tag_Group_qs_web'] }}"
-  
-- debug:
-    var: machine.username
-- debug:
-    var: machine.password
 ...

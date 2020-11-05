@@ -1,4 +1,4 @@
-- hosts: all
+- hosts: tag_Group_qs_lb
   vars:
     machine:
       username: '{{ ansible_user }}'
