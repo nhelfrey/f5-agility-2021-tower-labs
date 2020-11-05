@@ -1,8 +1,8 @@
 # F5 Variables
-f5_username: admin
-f5_password: thisisapw4f5qsdemolab!
-web_username: centos
-web_key: ~/.ssh/network-key.pem
+f5_username: 'admin'
+machine:
+  password: '{{ ansible_password }}'
+groupName: "{{ groups['tag_Group_qs_web'] }}"
 
 # Web Variables
 # ansible_user: "ec2-user"

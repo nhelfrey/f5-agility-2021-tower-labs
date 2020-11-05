@@ -3,12 +3,6 @@
   hosts: tag_Group_qs_lb
   connection: local
 
-  vars:
-    machine:
-      username: 'admin'
-      password: '{{ ansible_password }}'
-    groupName: "{{ groups['tag_Group_qs_web'] }}"
-
   tasks:
   - name: Setup provider
     set_fact:
@@ -22,9 +16,4 @@
   - name: Call Node Role
     include_role:
       name: f5-nodes
-
-  - debug:
-      var: machine.username
-  - debug:
-      var: machine.password
 ...
