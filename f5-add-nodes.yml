@@ -7,7 +7,7 @@
     machine:
       username: '{{ ansible_user }}'
       password: '{{ ansible_password }}'
-    groupName: tag_Group_qs_web
+    groupName: "{{ groups['tag_Group_qs_web'] }}"
 
   tasks:
   - name: Setup provider
