@@ -8,7 +8,7 @@
       password: "{{ f5_password }}"
       server_port: 8443
       validate_certs: false
-    host: "{{ item.ec2_private_ip_address }}"
-    name: "{{ item.ec2_tag_Name }}"
+    host: "{{ hostvars[item].ec2_private_ip_address }}"
+    name: "{{ hostvars[item].ec2_tag_Name }}"
   loop: "{{ groups['tag_Group_qs_web'] }}"
 ...
