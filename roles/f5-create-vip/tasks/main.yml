@@ -7,7 +7,7 @@
     destination: "{{ vip }}"
     port: "{{ vipport }}"
     enabled_vlans: "{{ enabledvlans }}"
-    all_profiles: ["{{ allprofiles }}"]
+    all_profiles: [{{ allprofiles }}]
     pool: "{{ pool_name }}"
     snat: "{{ snat }}"
 ...
