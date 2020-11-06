@@ -15,9 +15,14 @@
 - name: Copy images
   become: true
   copy:
-    src: files/{{ ec2_tag_Name }}.png
+#    src: files/{{ ec2_tag_Name }}.png
+    src: files/{{ item }}
     dest: /var/www/html/
     mode: u=rw,g=r,o=r
+  loop:
+    - F5-QS-Demo-web1.png
+    - F5-QS-Demo-web2.png
+    - F5-QS-Demo-web3.png
 
 #- name: Change directory permissions
 #  become: true
