@@ -15,12 +15,8 @@
 - name: Copy images
   become: true
   copy:
-    src: files/{{ item }}
+    src: files/{{ ec2_tag_Name }}.png
     dest: /var/www/images/
-  loop:
-    - web1.png
-    - web2.png
-    - web3.png
 
 - name: Start Apache Service
   become: true
