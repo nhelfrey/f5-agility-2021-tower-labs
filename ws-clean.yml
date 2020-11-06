@@ -1,0 +1,14 @@
+---
+- name: Webserver Cleanup
+  hosts: tag_Group_qs_web
+  connection: local
+
+  tasks:
+    - name: "Terminate labeled instances"
+      ec2_instance:
+        region: "{{ region }}"
+        state: absent
+        wait: false
+        filters:
+          "tag:Group": "qs-web"
+...

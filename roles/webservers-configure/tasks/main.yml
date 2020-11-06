@@ -15,7 +15,6 @@
 - name: Copy images
   become: true
   copy:
-#    src: files/{{ ec2_tag_Name }}.png
     src: files/{{ item }}
     dest: /var/www/html/
     mode: u=rw,g=r,o=r
@@ -23,13 +22,6 @@
     - F5-QS-Demo-web1.png
     - F5-QS-Demo-web2.png
     - F5-QS-Demo-web3.png
-
-#- name: Change directory permissions
-#  become: true
-#  file:
-#    path: /var/www/images/
-#    state: directory
-#    mode: u=rw,g=r,o=r
 
 - name: Start Apache Service
   become: true

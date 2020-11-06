@@ -1,5 +1,5 @@
 ---
-- name: Wait for SSH
+- name: Wait for SSH on webservers
   hosts: tag_Group_qs_web
   gather_facts: false
   tasks:

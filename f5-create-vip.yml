@@ -1,5 +1,5 @@
 ---
-- name: BIG-IP SETUP
+- name: Create VIP
   hosts: tag_Group_qs_lb
   connection: local
 
@@ -13,7 +13,7 @@
         server_port: "8443"
         validate_certs: "no"
 
-  - name: Call Add Pool Members
+  - name: Call create F5 VIP role
     include_role:
       name: f5-create-vip
 ...

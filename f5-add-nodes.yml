@@ -1,5 +1,5 @@
 ---
-- name: BIG-IP SETUP
+- name: Add nodes to F5
   hosts: tag_Group_qs_lb
   connection: local
 
