@@ -9,8 +9,18 @@
 - name: Configure Apache index.html
   become: true
   template:
-    src: index.html
+    src: index.j2
     dest: /var/www/html/index.html
+
+- name: Copy images
+  become: true
+  copy:
+    src: files/{{ item }}
+    dest: /var/www/images/
+  loop:
+    - web1.png
+    - web2.png
+    - web3.png
 
 - name: Start Apache Service
   become: true
