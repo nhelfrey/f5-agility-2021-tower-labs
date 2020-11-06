@@ -30,8 +30,10 @@ img {
 </head>
 <body>
 <div class="container">
-    <img src="images/{{ webserver_names }}"/>
-    <p>{{ webserver_names }}</p>
+{% for name in item %}
+    <img src="images/{{ name }}.png"/>
+    <p>{{ name }}</p>
+{% endfor %}
 </div>
 <footer>Sirius F5 Quick Start Demo</footer>
 </body>

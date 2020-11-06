@@ -17,7 +17,10 @@ vip: '172.31.6.244'
 
 # Web Variables
 ansible_python_interpreter: "auto_silent"
-webserver_names: "web1,web2,web3"
+webserver_names:
+  - web1
+  - web2
+  - web3
 
 # AWS
 aws_ssh_key_pair: "ansible-labs-only"
