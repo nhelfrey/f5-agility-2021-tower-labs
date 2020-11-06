@@ -1,0 +1,21 @@
+---
+# tasks file for f5-clean
+- name: DELETE VIRTUAL SERVER
+  bigip_virtual_server:
+    provider: "{{ provider }}"
+    name: "{{ vipname }}"
+    state: absent
+
+- name: DELETE POOL
+  bigip_pool:
+   provider: "{{ provider }}"
+   name: "{{ pool_name }}"
+   state: absent
+
+- name: DELETE NODES
+  bigip_node:
+    provider: "{{ provider }}"
+    name: "{{ hostvars[item].ec2_tag_Name }}"
+    state: absent
+  loop: "{{ groupName }}"
+...
