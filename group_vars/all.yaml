@@ -3,11 +3,17 @@ f5_username: 'admin'
 machine:
   password: '{{ ansible_password }}'
 groupName: "{{ groups['tag_Group_qs_web'] }}"
-pool_name: 'http_pool'
+pool_name: 'http-pool'
 lbmethod: 'round-robin'
 monitor: '/Common/http'
 monitortype: 'and_list'
 port_num: '80'
+vipname: 'vip'
+vipport: '443'
+enabledvlans: 'all'
+allprofiles: "'http', 'clientssl', 'oneconnect'"
+snat: 'Automap'
+vip: '172.31.6.244'
 
 # Web Variables
 # ansible_user: "ec2-user"
