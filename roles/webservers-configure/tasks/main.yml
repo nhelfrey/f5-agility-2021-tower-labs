@@ -17,6 +17,13 @@
   copy:
     src: files/{{ ec2_tag_Name }}.png
     dest: /var/www/images/
+    mode: u=rw,g=r,o=r
+
+- name: Change directory permissions
+  file:
+    path: /var/www/images/
+    state: directory
+    mode: u=rw,g=r,o=r
 
 - name: Start Apache Service
   become: true
