@@ -11,7 +11,7 @@
   template:
     src: index.j2
     dest: /var/www/html/index.html
-  loop: "{{ webserver_names.split(',') }}"
+  loop: "{{ ansible_host }}"
 
 - name: Copy images
   become: true
