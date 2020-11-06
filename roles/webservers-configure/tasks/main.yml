@@ -30,5 +30,5 @@
   become: true
   service:
     name: httpd
-    state: started
+    state: restart
 ...
