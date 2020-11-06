@@ -15,5 +15,5 @@
 
   - name: Call Add Pool Members
     include_role:
-      name: f5-add-pool-members
+      name: f5-create-vip
 ...
