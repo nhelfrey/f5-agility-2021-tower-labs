@@ -11,7 +11,7 @@ port_num: '80'
 vipname: 'vip'
 vipport: '443'
 enabledvlans: 'all'
-allprofiles: "'http', 'clientssl', 'oneconnect'"
+allprofiles: "['http', 'clientssl', 'oneconnect']"
 snat: 'Automap'
 vip: '172.31.6.244'
 
