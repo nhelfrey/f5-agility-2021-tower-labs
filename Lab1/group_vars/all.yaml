@@ -1,35 +1,4 @@
-# F5 Variables
-f5_username: 'admin'
-machine:
-  password: '{{ ansible_password }}'
-groupName: "{{ groups['tag_Group_qs_web'] }}"
-pool_name: 'http-pool'
-lbmethod: 'round-robin'
-monitor: '/Common/http'
-monitortype: 'and_list'
-port_num: '80'
-vipname: 'vip'
-vipport: '443'
-enabledvlans: 'all'
-allprofiles: "['http', 'clientssl', 'oneconnect']"
-snat: 'Automap'
-vip: '172.31.6.244'
-
-# Web Variables
-ansible_python_interpreter: "auto_silent"
-webserver_names:
-  - web1
-  - web2
-  - web3
-
-# AWS
-aws_ssh_key_pair: "ansible-labs-only"
-instance_type: "t3a.small"
-region: "us-east-2"
-security_group: "ssh-http-https"
-vpc_subnet: "subnet-3964a275"
-
-# Tags
-description: "F5 Quick Start Demo"
-cost: "aap"
-group: "qs-web"
+f5_username: admin
+f5_password: Mys1dlabspw!
+web_username: centos
+web_key: ~/.ssh/network-key.pem
