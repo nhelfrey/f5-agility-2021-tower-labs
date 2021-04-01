@@ -1,0 +1,20 @@
+---
+- name: BIG-IP SETUP
+  hosts: tag_lb
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Setting up provider values
+      set_fact:
+       provider:
+        server: "{{ ansible_host }}"
+        server_port: "8443"
+        validate_certs: "False"
+
+    - name: CREATE NODES
+      bigip_node:
+        provider: "{{ provider }}"
+        host: "{{ hostvars[item].private_ip_address }}"
+        name: "{{ hostvars[item].ec2_tag_Name }}"
+      loop: "{{ groups['tag_webservers'] }}"
