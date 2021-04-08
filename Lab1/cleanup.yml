@@ -1,6 +1,6 @@
 ---
 - name: Cleanup F5
-  hosts: tag_Group_qs_lb
+  hosts: tag_lb
   connection: local
 
   tasks:
@@ -13,7 +13,5 @@
 
   - name: Call Cleanup Role
     include_role:
-      name: f5-clean
-
-
+      name: cleanup
 ...
