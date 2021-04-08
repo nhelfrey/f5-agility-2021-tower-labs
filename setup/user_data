@@ -1,0 +1,11 @@
+#cloud-config
+chpasswd:
+  list: |
+    root:Mys1dlabspw!
+    admin:Mys1dlabspw!
+  expire: False
+tmos_declared:
+  enabled: true
+  icontrollx_trusted_sources: false
+  icontrollx_package_urls:
+    - "https://github.com/F5Networks/f5-appsvcs-extension/releases/download/v3.27.0/f5-appsvcs-3.27.0-3.noarch.rpm"

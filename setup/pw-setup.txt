@@ -1,0 +1,6 @@
+3.00 ssh into F5 and set admin password
+3.01 ssh -i ~/.ssh/network-key.pem admin@siduser155.f5.mysidlabs.com
+3.02 Accept SSH Key by typing yes
+3.03 command: modify auth user admin password Mys1dlabspw!
+3.04 command: save sys config
+3.05 command: quit

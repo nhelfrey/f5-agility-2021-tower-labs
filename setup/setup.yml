@@ -1,0 +1,11 @@
+---  
+- name: "Setup Ansible F5 Labs"
+  hosts: localhost
+  gather_facts: false
+  tasks:
+
+    - include_tasks: deploy-student-instance.yml
+      loop: "{{ student_ids }}"
+      loop_control:
+        loop_var: student_id
+...
