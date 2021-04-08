@@ -3,19 +3,20 @@
 - name: DELETE VIRTUAL SERVER
   bigip_virtual_server:
     provider: "{{ provider }}"
-    name: "{{ vipname }}"
+    name: "{{ vipName }}"
     state: absent
 
 - name: DELETE POOL
   bigip_pool:
    provider: "{{ provider }}"
-   name: "{{ pool_name }}"
+   name: "{{ poolName }}"
    state: absent
 
 - name: DELETE NODES
   bigip_node:
     provider: "{{ provider }}"
+    host: "{{ hostvars[item].ec2_private_ip_address }}"
     name: "{{ hostvars[item].ec2_tag_Name }}"
     state: absent
-  loop: "{{ groupName }}"
+  loop: "{{ groups['tag_webservers'] }}"
 ...

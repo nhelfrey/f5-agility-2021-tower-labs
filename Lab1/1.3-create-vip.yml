@@ -15,7 +15,7 @@
     - name: ADD VIRTUAL SERVER
       bigip_virtual_server:
         provider: "{{ provider }}"
-        name: "{{ vipname }}"
+        name: "{{ vipName }}"
         destination: "{{ private_ip_address }}"
         port: "443"
         enabled_vlans: "all"

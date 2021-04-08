@@ -15,7 +15,7 @@
     - name: CREATE POOL
       bigip_pool:
         provider: "{{ provider }}"
-        name: "http_pool"
+        name: "{{ poolName }}"
         lb_method: "round-robin"
         monitors: "/Common/http"
         monitor_type: "and_list"
@@ -27,5 +27,5 @@
         name: "{{ hostvars[item].ec2_tag_Name }}"
         host: "{{ hostvars[item].private_ip_address }}"
         port: "80"
-        pool: "http_pool"
+        pool: "{{ poolName }}"
       loop: "{{ groups['tag_webservers'] }}"
