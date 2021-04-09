@@ -1,11 +1,11 @@
 ---
 - name: AS3
-  hosts: lb
+  hosts: tag_lb
   connection: local
   gather_facts: false
 
   vars:
-    pool_members: "{{ groups['webservers'] }}"
+    pool_members: "{{ groups['tag_webservers'] }}"
 
   vars_prompt:
     - name: "tenantName"
