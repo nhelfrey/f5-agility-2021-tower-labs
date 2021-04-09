@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<policy integrity_check="407cc3ff6ca74bc5a49a71b63370dd70" bigip_version="16.0.1" name="/Common/theCatsup.app/theCatsup">
+<policy>
   <type>Security</type>
   <policy_version>
-    <timestamp>2021-04-09T18:24:40Z</timestamp>
-    <device_name>ip-172-31-12-166.us-east-2.compute.internal</device_name>
-    <policy_name>/Common/theCatsup.app/theCatsup</policy_name>
-    <last_change>Evasion Technique Directory traversals [update]: Enable Evasion Technique { audit: policy = /Common/theCatsup.app/theCatsup, component = Policy Builder }</last_change>
   </policy_version>
   <encoding>utf-8</encoding>
   <description>Rapid Deployment Policy</description>
