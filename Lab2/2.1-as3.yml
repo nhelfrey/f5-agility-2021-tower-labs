@@ -23,7 +23,7 @@
         timeout: 300
         body_format: json
         force_basic_auth: true
-        user: "admin"
-        password: "Mys1dlabspw!"
+        user: "{{ f5UserName }}"
+        password: "{{ f5Password }}"
         validate_certs: false
 ...
