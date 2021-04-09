@@ -1,14 +1,14 @@
 ---
 - name: AS3
-  hosts: lb
+  hosts: tag_lb
   connection: local
   gather_facts: false
 
-  vars_prompt:
-    - name: "tenantName"
-      prompt: "Enter the Tenant name:"
-      private: no
-      default: "WorkshopExample"
+#  vars_prompt:
+#    - name: "tenantName"
+#      prompt: "Enter the Tenant name:"
+#      private: no
+#      default: "WorkshopExample"
 
   tasks:
   - name: Remove Tenant AS3
@@ -19,7 +19,7 @@
       timeout: 300
       body_format: json
       force_basic_auth: true
-#      user: "{{ f5_username }}"
-#      password: "{{ f5_password }}"
+      user: "admin"
+      password: "Mys1dlabspw!"
       validate_certs: false
 ...
