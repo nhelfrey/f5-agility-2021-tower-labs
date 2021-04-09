@@ -1,9 +1,0 @@
----
-- name: Wait for SSH on webservers
-  hosts: tag_Group_qs_web
-  gather_facts: false
-  tasks:
-    - name: Wait for SSH
-      wait_for_connection:
-        timeout: 300
-...

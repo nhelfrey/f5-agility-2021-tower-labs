@@ -1,9 +1,0 @@
-[lb:children]
-f5
-
-[f5]
-<<siduserID>>.f5.mysidlabs.com private_ip=<<privateIP>>
-
-[webservers]
-Web1 private_ip=172.31.19.21
-Web2 private_ip=172.31.20.204
