@@ -8,7 +8,7 @@
     pool_members: "{{ groups['webservers'] }}"
 
   vars_prompt:
-    - name: "tenant_name"
+    - name: "tenantName"
       prompt: "Enter the Tenant name:"
       private: no
       default: "WorkshopExample"
