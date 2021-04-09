@@ -7,11 +7,11 @@
   vars:
     pool_members: "{{ groups['tag_webservers'] }}"
 
-  vars_prompt:
-    - name: "tenantName"
-      prompt: "Enter the Tenant name:"
-      private: no
-      default: "WorkshopExample"
+  #vars_prompt:
+  #  - name: "tenantName"
+  #    prompt: "Enter the Tenant name:"
+  #    private: no
+  #    default: "WorkshopExample"
 
   tasks:
     - name: Push AS3
