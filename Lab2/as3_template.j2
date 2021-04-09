@@ -24,8 +24,8 @@
           "persistenceMethods": [],
           "serverTLS": "webtls",
           "policyWAF": {
-                        "bigip": "/Common/theCatsup.app/theCatsup"
-                                },
+            "use": "myAsmPolicy"
+          }
         },
         "web_pool": {
           "class": "Pool",
@@ -43,7 +43,7 @@
             ]
           }]
         },
-        "My_ASM_Policy": {
+        "myAsmPolicy": {
         "class": "WAF_Policy",
         "url": "https://github.com/mysidlabs/f5-agility-2021-tower-labs/blob/main/Lab2/awaf.xml",
         "ignoreChanges": true
