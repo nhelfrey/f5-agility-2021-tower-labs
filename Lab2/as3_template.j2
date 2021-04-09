@@ -37,7 +37,7 @@
             "servicePort": 80,
             "serverAddresses": [
               {% set comma = joiner(",") %}
-              {% for mem in tag_webservers %}
+              {% for mem in poolMembers %}
                 {{comma()}} "{{  hostvars[mem]['private_ip_address'] }}"
               {% endfor %}
             ]
