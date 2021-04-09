@@ -8,7 +8,7 @@
     "id": "123abc",
     "label": "Sample 2",
     "remark": "HTTPS with round robin pool",
-    "{{ tenant_name }}": {
+    "{{ tenantName }}": {
       "class": "Tenant",
       "A1": {
         "class": "Application",
@@ -23,6 +23,9 @@
           "pool": "web_pool",
           "persistenceMethods": [],
           "serverTLS": "webtls",
+          "policyWAF": {
+                        "bigip": "/Common/linux-high"
+                                },
         },
         "web_pool": {
           "class": "Pool",

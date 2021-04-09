@@ -5,7 +5,7 @@
   gather_facts: false
 
   vars_prompt:
-    - name: "tenant_name"
+    - name: "tenantName"
       prompt: "Enter the Tenant name:"
       private: no
       default: "WorkshopExample"
@@ -13,7 +13,7 @@
   tasks:
   - name: Remove Tenant AS3
     uri:
-      url: "https://{{ ansible_host }}:8443/mgmt/shared/appsvcs/declare/{{ tenant_name }}"
+      url: "https://{{ ansible_host }}:8443/mgmt/shared/appsvcs/declare/{{ tenantName }}"
       method: DELETE
       status_code: 200
       timeout: 300
